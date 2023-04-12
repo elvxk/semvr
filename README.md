@@ -61,14 +61,20 @@
 
 ⚙️ Default SEMVR Bot prefix is `+` but you can change it with `setprefix` command. You can also use discord slash command
 
+INFO
 | Command | Description |
 | :---: | --- |
 | `help` | List all of commands |
 | `info` | About SEMVR bot |
 | `ping` | Bot pingging |
 | `prefix` | Current prefix |
-| `setprefix` | Change prefix |
-| `ava` | Get user avatar |
+| `avatar` | Get user avatar |
+
+ADMIN
+| Command  | Aliases | Argument | Description |
+| :---: | :---: | --- | 
+| `prefix` | __prfx__ | `newprefix` | Set new prefix |
+| `reactrole` | __rr__ | `none` | Add role by clicking reaction |
 
 
 ## Credits
