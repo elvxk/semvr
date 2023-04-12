@@ -59,7 +59,7 @@
 
 ## Commands
 
-⚙️ Default SEMVR Bot prefix is `+` but you can change it with `setprefix` command. You can also use discord slash command
+⚙️ Default SEMVR Bot prefix is `+` but you can change it with `prefix newprefix` command. You can also use discord slash command
 
 INFO
 | Command  | Aliases | Argument | Description |
