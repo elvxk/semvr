@@ -18,8 +18,8 @@
     <img src="https://img.shields.io/badge/Python-3.11-green">
   </a>
   
-  <a href="https://pypi.org/project/py-cord/">
-    <img src="https://img.shields.io/badge/py--cord-2.4.1-important">
+  <a href="https://pypi.org/project/discord.py/">
+    <img src="https://img.shields.io/badge/discord.py-2.2.2-important">
   </a>
   
   <a href="https://discloudbot.com/">
@@ -81,9 +81,9 @@ ADMIN
 
 📦 This BOT  uses the following open source packages:
 
-- [Python](https://www.python.org/)
-- [py-cord](https://pypi.org/project/py-cord/)
-- [Discloud](https://discloudbot.com/)
+- 🐍 [Python](https://www.python.org/)
+- 🤖 [discord.py](https://pypi.org/project/discord.py/)
+- ☁️ [Discloud](https://discloudbot.com/)
 
 
 ## Support
