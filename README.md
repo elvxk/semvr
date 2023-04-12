@@ -73,8 +73,8 @@ INFO
 ADMIN
 | Command  | Aliases | Argument | Description |
 | :---: | :---: | :---: | --- | 
-| `prefix` | __prfx__ | `newprefix` | Set new prefix |
-| `reactrole` | __rr__ | `none` | Add role by clicking reaction |
+| `prefix` | _prfx_ | `newprefix` | Set new prefix |
+| `reactrole` | _rr_ | ❌ | Add role by clicking reaction |
 
 
 ## Credits
