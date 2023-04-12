@@ -69,6 +69,7 @@ INFO
 | `ping` | _ping_ | ❌ | Bot pingging |
 | `prefix` | _prfx_ | ✔️ | Current prefix |
 | `avatar` | _ava_ | `user:` | Get user avatar |
+| `banner` | _bnr_ | `user:` | Get user banner |
 
 ADMIN
 | Command  | Aliases | Argument | Description |
