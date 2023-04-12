@@ -72,7 +72,7 @@ INFO
 
 ADMIN
 | Command  | Aliases | Argument | Description |
-| :---: | :---: | --- | 
+| :---: | :---: | :---: | --- | 
 | `prefix` | __prfx__ | `newprefix` | Set new prefix |
 | `reactrole` | __rr__ | `none` | Add role by clicking reaction |
 
