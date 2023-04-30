@@ -107,5 +107,5 @@
 
 ---
 > GitHub [@elvxk](https://github.com/elvxk) &nbsp;&middot;&nbsp;
-> Instagram [@elvxk](https://instagram.com/elvxk)
+> Instagram [@elvxk](https://instagram.com/elvxk) &nbsp;&middot;&nbsp;
 > Twitter [@r_sandriii](https://twitter.com/r_sandriii)
