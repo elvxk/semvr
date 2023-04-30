@@ -61,20 +61,32 @@
 
 ⚙️ Default SEMVR Bot prefix is `+` but you can change it with `prefix newprefix` command. You can also use discord slash command
 
-INFO
+🔐 ADMIN
 | Command  | Aliases | Argument | Description |
 | :---: | :---: | :---: | --- | 
-| `help` | _help_ | ❌ | List all of commands |
-| `info` | _info_ | ❌ | About SEMVR bot |
-| `ping` | _ping_ | ❌ | Bot pingging |
-| `avatar` | _ava_ | `user:` | Get user avatar |
-| `banner` | _bnr_ | `user:` | Get user banner |
-
-ADMIN
-| Command  | Aliases | Argument | Description |
-| :---: | :---: | :---: | --- | 
+| `autorole` | _aur_ | `on` `off` `add` `remove` | Create auto role |
+| `goodbye` | _gbye_ | `on` `off` `msg_on` `msg_off` `set` `bg` `test` | Send goodbye message |
 | `prefix` | _prfx_ | `newprefix:` | Set new prefix |
-| `reactrole` | _rr_ | ❌ | Add role by clicking reaction |
+| `reactrole` | _rr_ | `none` | Add role by clicking reaction |
+| `welcomer` | _wlcm_ | `on` `off` `msg_on` `msg_off` `set` `bg` `test` | Send welcome message |
+
+🚩 INFO
+| Command  | Aliases | Argument | Description |
+| :---: | :---: | :---: | --- | 
+| `avatar` | _ava_ | `user` | Get user avatar |
+| `banner` | _bnr_ | `user` | Get user banner |
+| `help` | _h_ | `none` | List all of commands |
+| `info` | _i_ | `none` | About SEMVR bot |
+| `ping` | _p_ | `none` | Bot pingging |
+| `servericon` | _si_ | `none` | Get Guild icon |
+| `serverinfo` | _sinfo , gi_ | `none` | Show guild information |
+| `userinfo` | _uinfo , ui_ | `user` | Show user information |
+
+😄 FUN
+| Command  | Aliases | Argument | Description |
+| :---: | :---: | :---: | --- | 
+| `meme` | _mim_ | `none` | Get random meme |
+| `noentry` | _ne_ | `user` | Cross out the avatar of the user you tagged |
 
 
 ## Credits
