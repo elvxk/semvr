@@ -37,7 +37,6 @@
   <a href="#commands">Commands</a> •
   <a href="#credits">Credits</a> •
   <a href="#support">Support</a>
-	<a href="#test">test</a>
 </p>
 
 
@@ -105,7 +104,6 @@
 
 <a href="https://saweria.co/elvxk" target="_blank"><img src="https://github.com/elvxk/semvr/blob/main/assets/saweria.png" ></a>
 
-### Test
 
 
 ---
