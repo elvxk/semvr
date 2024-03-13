@@ -31,11 +31,25 @@ for (const folder of commandFolders) {
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(process.env.TOKEN);
 
-// for global commands
-rest
-  .put(Routes.applicationCommands(process.env.CLIENT_ID), { body: [] })
-  .then(() => console.log("Successfully deleted all application commands."))
-  .catch(console.error);
+if (process.env.ENVIRONMENT === "DEV") {
+  // for guild-based commands
+  rest
+    .put(
+      Routes.applicationGuildCommands(
+        process.env.CLIENT_ID,
+        process.env.GUILD_ID,
+      ),
+      { body: [] },
+    )
+    .then(() => console.log("Successfully deleted all guild commands."))
+    .catch(console.error);
+} else {
+  // for global commands
+  rest
+    .put(Routes.applicationCommands(process.env.CLIENT_ID), { body: [] })
+    .then(() => console.log("Successfully deleted all application commands."))
+    .catch(console.error);
+}
 
 // and deploy your commands!
 (async () => {
@@ -45,7 +59,12 @@ rest
     );
 
     const data = await rest.put(
-      Routes.applicationCommands(process.env.CLIENT_ID),
+      process.env.ENVIRONMENT === "DEV"
+        ? Routes.applicationGuildCommands(
+            process.env.CLIENT_ID,
+            process.env.GUILD_ID,
+          )
+        : Routes.applicationCommands(process.env.CLIENT_ID),
       { body: commands },
     );
 
