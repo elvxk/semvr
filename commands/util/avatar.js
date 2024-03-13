@@ -8,10 +8,10 @@ module.exports = {
     .setName("avatar")
     .setDescription("Get user avatar")
     .addUserOption((option) =>
-      option.setName("target").setDescription("user target."),
+      option.setName("user").setDescription("Display avatar target user."),
     ),
   async execute(interaction) {
-    const target = interaction.options.getUser("target");
+    const target = interaction.options.getUser("user");
     await interaction.reply({
       embeds: [
         avatarEmbed
