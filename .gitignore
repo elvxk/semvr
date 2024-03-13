@@ -4,6 +4,7 @@
 ### dotenv ###
 .env
 config.json
+discloud.config
 
 ### Node ###
 # Logs
