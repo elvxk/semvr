@@ -31,7 +31,7 @@ for (const folder of commandFolders) {
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(process.env.TOKEN);
 
-if (process.env.ENVIRONMENT === "DEV") {
+if (process.env.ENV === "DEV") {
   // for guild-based commands
   rest
     .put(
@@ -59,7 +59,7 @@ if (process.env.ENVIRONMENT === "DEV") {
     );
 
     const data = await rest.put(
-      process.env.ENVIRONMENT === "DEV"
+      process.env.ENV === "DEV"
         ? Routes.applicationGuildCommands(
             process.env.CLIENT_ID,
             process.env.GUILD_ID,
