@@ -26,7 +26,7 @@
 
 📥 Invite SEMVR Bot to your discord server by clicking button below
 
-<a href="https://discord.com/api/oauth2/authorize?client_id=1093155834936164473&permissions=8&scope=bot">
+<a href="https://discord.com/api/oauth2/authorize?client_id=1093155834936164473&permissions=8&scope=bot%20applications.commands">
 	<img src="https://github.com/elvxk/semvr/blob/main/assets/btn_dc.png">
 </a>
 
