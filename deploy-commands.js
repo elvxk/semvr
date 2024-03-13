@@ -31,6 +31,12 @@ for (const folder of commandFolders) {
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(process.env.TOKEN);
 
+// for global commands
+rest
+  .put(Routes.applicationCommands(process.env.CLIENT_ID), { body: [] })
+  .then(() => console.log("Successfully deleted all application commands."))
+  .catch(console.error);
+
 // and deploy your commands!
 (async () => {
   try {
@@ -38,18 +44,10 @@ const rest = new REST().setToken(process.env.TOKEN);
       `Started refreshing ${commands.length} application (/) commands.`,
     );
 
-    // The put method is used to fully refresh all commands in the guild with the current set
-    let type;
-    if (process.env.ENV === "PROD") {
-      type = Routes.applicationCommands(process.env.CLIENT_ID);
-    } else {
-      type = Routes.applicationGuildCommands(
-        process.env.CLIENT_ID,
-        process.env.GUILD_ID,
-      );
-    }
-
-    const data = await rest.put(type, { body: commands });
+    const data = await rest.put(
+      Routes.applicationCommands(process.env.CLIENT_ID),
+      { body: commands },
+    );
 
     console.log(
       `Successfully reloaded ${data.length} application (/) commands.`,
