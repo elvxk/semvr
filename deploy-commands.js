@@ -22,7 +22,7 @@ for (const folder of commandFolders) {
       commands.push(command.data.toJSON());
     } else {
       console.log(
-        `[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`,
+        ` 🔓 [WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`,
       );
     }
   }
@@ -41,7 +41,7 @@ if (process.env.ENV === "DEV") {
       ),
       { body: [] },
     )
-    .then(() => console.log("Successfully deleted all guild commands."))
+    .then(() => console.log(" 🩸 Successfully deleted all guild commands."))
     .catch(console.error);
 } else {
   // for global commands
@@ -50,12 +50,10 @@ if (process.env.ENV === "DEV") {
     .then(() => console.log("Successfully deleted all application commands."))
     .catch(console.error);
 }
-
-// and deploy your commands!
-(async () => {
+const deployCommands = async () => {
   try {
     console.log(
-      `Started refreshing ${commands.length} application (/) commands.`,
+      ` ⏳ Started refreshing ${commands.length} application (/) commands.`,
     );
 
     const data = await rest.put(
@@ -69,10 +67,11 @@ if (process.env.ENV === "DEV") {
     );
 
     console.log(
-      `Successfully reloaded ${data.length} application (/) commands.`,
+      ` 🍻 Successfully reloaded ${data.length} application (/) commands.`,
     );
   } catch (error) {
     // And of course, make sure you catch and log any errors!
     console.error(error);
   }
-})();
+};
+module.exports = { deployCommands };
