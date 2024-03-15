@@ -4,7 +4,7 @@ module.exports = {
   category: "util",
   data: new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("Replies with Pong!"),
+    .setDescription("🏓 Ping the bot!"),
   async execute(interaction) {
     const sent = await interaction.reply({
       content: "Pinging...",
