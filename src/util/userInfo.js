@@ -1,7 +1,7 @@
-const { Colors } = require("discord.js");
-const { EmbedBuilder } = require("discord.js");
+import "dotenv/config";
+import { Colors, EmbedBuilder } from "discord.js";
 
-const userInfo = async (interaction) => {
+export const userInfo = async (interaction) => {
   const embed = new EmbedBuilder();
   let user;
   if (interaction.options.getUser("user")) {
@@ -13,7 +13,7 @@ const userInfo = async (interaction) => {
   let banner, name, id, username, avatar, born, joined;
 
   await user
-    .fetch(true) // Memaksa fetch data pengguna
+    .fetch(true)
     .then((fetchedUser) => {
       banner = fetchedUser.bannerURL({ size: 1024 });
     })
@@ -66,12 +66,10 @@ const userInfo = async (interaction) => {
         )
         .setImage(banner)
         .setFooter({
-          text: `Copyright © 2023 SEMVR | Made with love ✨`,
+          text: process.env.BOT_FOOTER,
           iconURL: interaction.client.user.avatarURL(),
         })
         .setColor(Colors.Gold),
     ],
   });
 };
-
-module.exports = { userInfo };

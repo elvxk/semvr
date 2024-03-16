@@ -1,7 +1,7 @@
-const { Colors } = require("discord.js");
-const { EmbedBuilder } = require("discord.js");
+import "dotenv/config";
+import { Colors, EmbedBuilder } from "discord.js";
 
-const userAvatar = async (interaction) => {
+export const userAvatar = async (interaction) => {
   const embed = new EmbedBuilder();
   const target = interaction.options.getUser("user");
   await interaction.reply({
@@ -16,12 +16,10 @@ const userAvatar = async (interaction) => {
             : interaction.user.avatarURL({ size: 1024, dynamic: true }),
         )
         .setFooter({
-          text: `Copyright © 2023 SEMVR | Made with love ✨`,
+          text: process.env.BOT_FOOTER,
           iconURL: interaction.client.user.avatarURL(),
         })
         .setColor(Colors.Gold),
     ],
   });
 };
-
-module.exports = { userAvatar };
