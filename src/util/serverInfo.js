@@ -1,7 +1,7 @@
-const { Colors } = require("discord.js");
-const { EmbedBuilder } = require("discord.js");
+import "dotenv/config";
+import { Colors, EmbedBuilder } from "discord.js";
 
-const serverInfo = async (interaction) => {
+export const serverInfo = async (interaction) => {
   const embed = new EmbedBuilder();
   const born = new Date(interaction.guild.createdTimestamp);
   const age = Math.floor((new Date() - born) / 31536000000);
@@ -78,12 +78,10 @@ const serverInfo = async (interaction) => {
           },
         )
         .setFooter({
-          text: `Copyright © 2023 SEMVR | Made with love ✨`,
+          text: process.env.BOT_FOOTER,
           iconURL: interaction.client.user.avatarURL(),
         })
         .setColor(Colors.Gold),
     ],
   });
 };
-
-module.exports = { serverInfo };
