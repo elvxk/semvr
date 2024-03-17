@@ -2,9 +2,13 @@ import "dotenv/config";
 import { REST, Routes } from "discord.js";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const commands = [];
-const __dirname = import.meta.dirname;
+
 const foldersPath = path.join(__dirname, "commands");
 const commandFolders = fs.readdirSync(foldersPath);
 

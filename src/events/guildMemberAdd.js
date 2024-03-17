@@ -3,7 +3,12 @@ import prisma from "../libs/prisma.js";
 import { request } from "undici";
 import { join } from "path";
 import { createCanvas, loadImage, GlobalFonts } from "@napi-rs/canvas";
-const __dirname = import.meta.dirname;
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// const __dirname = import.meta.dirname;
 
 export const name = Events.GuildMemberAdd;
 export const execute = async (interaction) => {
