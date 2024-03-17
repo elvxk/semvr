@@ -79,7 +79,7 @@ export const serverInfo = async (interaction) => {
         )
         .setFooter({
           text: process.env.BOT_FOOTER,
-          iconURL: interaction.client.user.avatarURL(),
+          iconURL: interaction.client.user.displayAvatarURL(),
         })
         .setColor(Colors.Gold),
     ],

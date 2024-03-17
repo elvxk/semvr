@@ -56,7 +56,7 @@ export const execute = async (interaction) => {
     );
     const target = interaction.user;
     const image = serverWelcomer.image;
-    const userAvatar = target.avatarURL();
+    const userAvatar = target.displayAvatarURL();
     const userName = target.tag;
     const color = serverWelcomer.color ? serverWelcomer.color : "#ffffff";
     const shadow = serverWelcomer.shadow ? 25 : 0;

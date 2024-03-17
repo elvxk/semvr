@@ -36,7 +36,7 @@ export const userBanner = async (interaction) => {
         .setImage(banner)
         .setFooter({
           text: process.env.BOT_FOOTER,
-          iconURL: interaction.client.user.avatarURL(),
+          iconURL: interaction.client.user.displayAvatarURL(),
         })
         .setColor(banner ? Colors.Gold : Colors.Red),
     ],
