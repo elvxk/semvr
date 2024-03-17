@@ -22,7 +22,7 @@ export const userInfo = async (interaction) => {
   name = user.globalName;
   username = user.username;
   id = user.id;
-  avatar = user.avatarURL({ size: 1024 });
+  avatar = user.displayAvatarURL({ size: 1024 });
 
   born = new Date(user.createdTimestamp);
   var age = Math.floor((new Date() - born) / 31536000000);
@@ -67,7 +67,7 @@ export const userInfo = async (interaction) => {
         .setImage(banner)
         .setFooter({
           text: process.env.BOT_FOOTER,
-          iconURL: interaction.client.user.avatarURL(),
+          iconURL: interaction.client.user.displayAvatarURL(),
         })
         .setColor(Colors.Gold),
     ],

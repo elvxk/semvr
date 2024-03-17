@@ -12,12 +12,12 @@ export const userAvatar = async (interaction) => {
         )
         .setImage(
           target
-            ? target.avatarURL({ size: 1024, dynamic: true })
-            : interaction.user.avatarURL({ size: 1024, dynamic: true }),
+            ? target.displayAvatarURL({ size: 1024, dynamic: true })
+            : interaction.user.displayAvatarURL({ size: 1024, dynamic: true }),
         )
         .setFooter({
           text: process.env.BOT_FOOTER,
-          iconURL: interaction.client.user.avatarURL(),
+          iconURL: interaction.client.user.displayAvatarURL(),
         })
         .setColor(Colors.Gold),
     ],
