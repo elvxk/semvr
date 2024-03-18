@@ -72,7 +72,7 @@ export const leavePreview = async (interaction) => {
     : "GOODBYE";
   const greeting_msg = serverWelcomer.greeting_msg
     ? formater(serverWelcomer.greeting_msg)
-    : formater('"leave the {server.name} server"');
+    : formater('"left the server"');
 
   GlobalFonts.registerFromPath(
     join(__dirname, "..", "fonts", "discord.otf"),
