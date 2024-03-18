@@ -26,3 +26,17 @@ model Welcomer {
     shadow        Boolean?  @default(true)
     enabled       Boolean  @default(true)
 }
+
+model Leave {
+    id            String    @id @default(uuid())
+    server_id     String    @unique
+    server_name   String
+    channel       String?
+    message       String?
+    image         String?
+    greeting      String?
+    greeting_msg  String?
+    color         String?
+    shadow        Boolean?  @default(true)
+    enabled       Boolean  @default(true)
+}
