@@ -40,3 +40,10 @@ model Leave {
     shadow        Boolean?  @default(true)
     enabled       Boolean  @default(true)
 }
+
+model Verify {
+    id            String  @id @default(uuid())
+    message_id    String
+    role_id       String
+    message_after String
+  }
