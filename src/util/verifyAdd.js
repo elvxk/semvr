@@ -1,3 +1,4 @@
+import "dotenv/config";
 import prisma from "./../libs/prisma.js";
 import {
   Colors,
@@ -28,7 +29,7 @@ export const verifyAdd = async (interaction) => {
   const check_pos = checkRolePos(
     interaction,
     interaction.options.getRole("role"),
-    "SEMAR",
+    process.env.ROLE_NAME,
   );
 
   if (check_pos) {
