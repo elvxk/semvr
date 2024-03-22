@@ -6,10 +6,18 @@ export const data = new SlashCommandBuilder()
 
 export const execute = async (interaction) => {
   const sent = await interaction.reply({
-    content: "Pinging...",
+    content: "`🏓` Pinging...",
     fetchReply: true,
   });
+
   interaction.editReply(
-    `Roundtrip latency: ${sent.createdTimestamp - interaction.createdTimestamp}ms`,
+    "`🍻` " +
+      "Roundtrip Latency is `" +
+      (sent.createdTimestamp - interaction.createdTimestamp) +
+      " ms`\n" +
+      "`🍻` " +
+      "API Latency is `" +
+      `${Math.round(interaction.client.ws.ping)} ms` +
+      "`",
   );
 };
